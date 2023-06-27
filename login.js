@@ -6,7 +6,7 @@ function login() {
 
     if (username == uname && password == pword) {
       alert("Welcome User!");
-      window.location.href = '/monster-html/index.html';
+      window.location.href = 'monster-html/index.html';
     } 
     else if (password == pword){
       alert("Invalid username.");
