@@ -19,7 +19,7 @@ const val = () => {
     }
     else{
         alert("Successfully registered.");
-        window.location.href = '../monster-html/index.html';
+        window.location.href = 'monster-html/index.html';
     }
 
     
