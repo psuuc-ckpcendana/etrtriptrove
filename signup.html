@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign in</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+	<div class="infinity-container">
+		
+		<div class="logo">
+			<img src="logo.png" width="100px">
+		</div>
+		
+		<div class="infinity-form-block">
+			<div class="infinity-click-box text-center">Create an account</div>
+			
+			<div class="infinity-fold">
+				<div class="infinity-form">
+					<div class="form-input">
+						<span><i class="fa fa-user"></i></span>
+						<input type="text" name="" placeholder="username" tabindex="11" id="uname">
+					</div>
+						<div class="form-input">
+							<span><i class="fa fa-user"></i></span>
+							<input type="email" name="" placeholder="Email Address" tabindex="11" id="email">
+						</div>
+						<div class="form-input">
+							<span><i class="fa fa-lock"></i></span>
+							<input type="password" name="" placeholder="Password" id="epass">
+						</div>
+						
+						<div class="col-12 px-0 text-right">
+						<button type="submit" onclick="register()">Sign up</button>
+						</div>
+						<div class="text-center text-sm">or Sign up with</div>
+						<div class="infinity-social-btn text-center">
+							<ul class="text-center">
+								
+								<li class="text-center"><a href="register.html" class="facebook">
+									<i class="fa fa-facebook"></i><i class="fa fa-facebook"></i></a>
+								</li>
+								
+								<li class="text-center"><a href="register.html" class="google">
+									<i class="fa fa-google"></i><i class="fa fa-google"></i></a>
+								</li>
+								
+								<li class="text-center"><a href="register" class="twitter">
+									<i class="fa fa-twitter"></i><i class="fa fa-twitter"></i></a>
+								</li>
+							</ul>
+						</div>
+						<div class="text-center">Already have an account?
+							<a class="login-link" href="#" onclick="signin()">Sign in</a>
+		            	</div>
+				  </div>
+			 </div>
+		 </div>
+		
+	</div>
+	<script src="signup.js"></script>
+</body>
+</html>

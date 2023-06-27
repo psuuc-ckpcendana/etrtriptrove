@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="keywords"
+      content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Monsterlite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Monster admin lite design, Monster admin lite dashboard bootstrap 5 dashboard template"
+    />
+    <meta
+      name="description"
+      content="Monster Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework"
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Hotel Booking</title>
+    <link
+      rel="canonical"
+      href="https://www.wrappixel.com/templates/monster-admin-lite/"
+    />
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../assets/images/TRIPTROVE.png"
+    />
+    <!-- Custom CSS -->
+    <link href="css/style.min.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      #card {
+        background-image: url(/assets/images/hbook.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .wrapper {
+        max-width: 800px;
+        margin: 50px auto;
+      }
+
+      .wrapper form {
+        padding: 30px 50px;
+      }
+
+      .wrapper form .form-group {
+        padding-bottom: 0.5rem;
+      }
+
+      .wrapper form .option {
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        display: block;
+      }
+
+      .wrapper form .option input {
+        display: none;
+      }
+
+      .wrapper form .checkmark {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        height: 17px;
+        width: 17px;
+        background-color: #fff;
+        border: 1px solid #aaa;
+        border-radius: 50%;
+      }
+
+      .wrapper form .option input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      .wrapper form .option .checkmark:after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        display: block;
+        border-radius: 50%;
+        background-color: #333;
+        position: absolute;
+        top: 48%;
+        left: 52%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 200ms ease-in-out 0s;
+      }
+
+      .wrapper form .option:hover input[type="radio"] ~ .checkmark {
+        background-color: #f4f4f4;
+      }
+
+      .wrapper form .option input[type="radio"]:checked ~ .checkmark {
+        background: #fff;
+        color: #fff;
+        transition: 300ms ease-in-out 0s;
+      }
+
+      .wrapper form .option input[type="radio"]:checked ~ .checkmark:after {
+        transform: translate(-50%, -50%) scale(1);
+        color: #fff;
+      }
+
+      .wrapper form a {
+        color: #333;
+      }
+
+      .wrapper form .form-control {
+        outline: none;
+        border: none;
+      }
+
+      .wrapper form .form-control:focus {
+        box-shadow: none;
+      }
+
+      .wrapper form input[type="text"]:focus::placeholder {
+        color: transparent;
+      }
+
+      input[type="date"] {
+        cursor: pointer;
+      }
+
+      .wrapper form .label::after {
+        position: absolute;
+        /* background-color: #fff; */
+        top: 5px;
+        left: 0px;
+        font-size: 0.9rem;
+        margin: 0rem 0.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08rem;
+        font-weight: 600;
+        color: #999;
+        transition: all 0.2s ease-in-out;
+        transform: scale(0);
+      }
+
+      .wrapper form .label#from::after {
+        content: "From";
+      }
+
+      .wrapper form .label#to::after {
+        content: "To";
+      }
+
+      .wrapper form .label#depart::after {
+        content: "Depart Date";
+      }
+
+      .wrapper form .label#return::after {
+        content: "Return Date";
+      }
+
+      .wrapper form .label#psngr::after {
+        content: "Traveller(s)";
+      }
+
+      .wrapper form input[type="text"]:focus ~ .label::after {
+        top: -15px;
+        left: 0px;
+        transform: scale(1);
+      }
+
+      .wrapper form input[type="date"]:focus ~ .label::after {
+        top: -15px;
+        left: 0px;
+        transform: scale(1);
+      }
+
+      /* Margin */
+      .margin {
+        margin: 2rem 0rem;
+      }
+
+      /* Media Queries */
+      @media (max-width: 575.5px) {
+        .wrapper {
+          margin: 10px;
+        }
+
+        .wrapper form {
+          padding: 20px;
+        }
+
+        .margin {
+          margin: 0.2rem 0rem;
+        }
+      }
+      input[type="text"],
+      input[type="number"] {
+        width: 91%;
+        padding: 12px 20px;
+        margin: 8px;
+        display: inline-block;
+        border: 1px solid white;
+        border-radius: 4px;
+      }
+      input[type="submit"] {
+        background-color: rgb(105, 105, 105);
+        color: white;
+        padding: 6px 12px;
+        margin: 15px 0 10px;
+        display: inline-block;
+        border: none;
+        border-radius: 30px;
+        font-size: 1rem;
+        cursor: pointer;
+        outline: none;
+      }
+      input[type="submit"]:hover {
+        background: skyblue;
+      }
+      table{
+    width: 100%;
+    margin: 40px auto;
+    background-color: rgb(255, 255, 255);
+}
+table.list{
+    text-align: center;
+    width: 100%;
+}
+td{
+    border: 1px solid white;
+    text-align: left;
+    padding: 15px 15px;
+}
+    </style>
+  </head>
+
+  <body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+      <div class="lds-ripple">
+        <div class="lds-pos"></div>
+        <div class="lds-pos"></div>
+      </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div
+      id="main-wrapper"
+      data-layout="vertical"
+      data-navbarbg="skin5"
+      data-sidebartype="full"
+      data-sidebar-position="absolute"
+      data-header-position="absolute"
+      data-boxed-layout="full"
+    >
+      <!-- ============================================================== -->
+      <!-- Topbar header - style you can find in pages.scss -->
+      <!-- ============================================================== -->
+      <header class="topbar" data-navbarbg="skin6">
+        <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+          <div class="navbar-header" data-logobg="skin6">
+            <!-- ============================================================== -->
+            <!-- Logo -->
+            <!-- ============================================================== -->
+            <a class="navbar-brand" href="index.html">
+              <!-- Logo icon -->
+              <b class="logo-icon">
+                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                <!-- Dark Logo icon -->
+                <img
+                  src="../assets/images/TRIPTROVE.png"
+                  alt="homepage"
+                  class="dark-logo"
+                />
+              </b>
+              <!--End Logo icon -->
+              <!-- Logo text -->
+            </a>
+            <!-- ============================================================== -->
+            <!-- End Logo -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <a
+              class="nav-toggler waves-effect waves-light text-dark d-block d-md-none"
+              href="javascript:void(0)"
+              ><i class="ti-menu ti-close"></i
+            ></a>
+          </div>
+          <!-- ============================================================== -->
+          <!-- End Logo -->
+          <!-- ============================================================== -->
+          <div
+            class="navbar-collapse collapse"
+            id="navbarSupportedContent"
+            data-navbarbg="skin5"
+          >
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav me-auto mt-md-0">
+              <!-- ============================================================== -->
+              <!-- Search -->
+              <!-- ============================================================== -->
+
+              <li class="nav-item hidden-sm-down">
+                <form class="app-search ps-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search for..."
+                  />
+
+                </form>
+              </li>
+            </ul>
+
+            <!-- ============================================================== -->
+            <!-- Right side toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav">
+              <!-- ============================================================== -->
+              <!-- User profile and search -->
+              <!-- ============================================================== -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle waves-effect waves-dark"
+                  href="pages-profile.html"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="../assets/images/domingsu.jpg"
+                    alt="user"
+                    class="profile-pic me-2 rounded-circle"
+                    height="30"
+                  />Doming Su
+                </a>
+                <ul
+                  class="dropdown-menu show"
+                  aria-labelledby="navbarDropdown"
+                ></ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- ============================================================== -->
+      <!-- End Topbar header -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <aside class="left-sidebar" data-sidebarbg="skin6">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+          <!-- Sidebar navigation-->
+          <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+              <!-- User Profile-->
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="index.html"
+                  aria-expanded="false"
+                  ><i class="me-3 far fa-clock fa-fw" aria-hidden="true"></i
+                  ><span class="hide-menu">Dashboard</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="pages-profile.html"
+                  aria-expanded="false"
+                >
+                  <i class="me-3 fa fa-user" aria-hidden="true"></i
+                  ><span class="hide-menu">Profile</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="table-basic.html"
+                  aria-expanded="false"
+                  ><i class="me-3 fa fa-table" aria-hidden="true"></i
+                  ><span class="hide-menu">New Users</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="fpageflight.html"
+                  aria-expanded="false"
+                  ><i class="me-3 fa fa-columns" aria-hidden="true"></i
+                  ><span class="hide-menu">Flight Booking</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a
+                  class="sidebar-link waves-effect waves-dark sidebar-link"
+                  href="HotelBooking.html"
+                  aria-expanded="false"
+                  ><i class="me-3 fa fa-columns" aria-hidden="true"></i
+                  ><span class="hide-menu">Hotel Booking</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <!-- End Sidebar navigation -->
+        </div>
+        <!-- End Sidebar scroll-->
+      </aside>
+      <!-- ============================================================== -->
+      <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Page wrapper  -->
+      <!-- ============================================================== -->
+      <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="page-breadcrumb">
+          <div class="row align-items-center">
+            <div class="col-md-6 col-8 align-self-center">
+              <h3 class="page-title mb-0 p-0">Hotel Booking</h3>
+              <div class="d-flex align-items-center">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Hotel Booking
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+          <!-- ============================================================== -->
+          <!-- Start Page Content -->
+          <!-- ============================================================== -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card" id="card">
+                <div class="card-body">
+                  <div class="wrapper bg-white">
+                    <form autocomplete="off">
+                      <div
+                        class="d-flex align-items-center flex-fill me-sm-1 my-sm-0 my-4 border-bottom position-relative"
+                      >
+                        <label for="Type">Quantity</label>
+                        <input type="text" name="Type" id="Type" />
+                      </div>
+
+                      <div
+                        class="d-flex align-items-center flex-fill me-sm-1 my-sm-0 my-4 border-bottom position-relative"
+                      >
+                        <label for="Name">Name</label>
+                        <input type="text" name="Name" id="Name" />
+                      </div>
+
+                      <div
+                        class="d-flex align-items-center flex-fill me-sm-1 my-sm-0 my-4 border-bottom position-relative"
+                      >
+                        <label for="From">Check In</label>
+                        <input type="text" name="From" id="From" />
+                      </div>
+
+                      <div
+                        class="d-flex align-items-center flex-fill me-sm-1 my-sm-0 my-4 border-bottom position-relative"
+                      >
+                        <label for="To">Check Out</label>
+                        <input type="text" name="To" id="To" />
+                      </div>
+
+                      <div
+                        class="d-flex align-items-center flex-fill me-sm-1 my-sm-0 my-4 border-bottom position-relative"
+                      >
+                        <label for="alis">Hotel</label>
+                        <input type="text" name="alis" id="alis" />
+                      </div>
+
+                      <div
+                      class="d-flex align-items-center flex-fill me-sm-1 my-sm-0 my-4 border-bottom position-relative"
+                    >
+                      <label for="Place">Place</label>
+                      <input type="text" name="Place" id="Place" />
+                    </div>
+                      <br />
+
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop"
+                        onclick="onFormSubmit()"
+                      >
+                        Submit
+                      </button>
+                    </form>
+
+                    <div
+                      class="modal fade"
+                      id="staticBackdrop"
+                      data-bs-backdrop="static"
+                      data-bs-keyboard="false"
+                      tabindex="-1"
+                      aria-labelledby="staticBackdropLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h2 class="modal-title" id="staticBackdropLabel">
+                              Booked!!
+                            </h2>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <h4>Hotel Receipt</h4>
+                            <table class="receipt" id="receipT">
+                                <tr><img src="/assets/images/barcodeflight.jpg" alt="" height="200"></tr>
+                              <thead>
+                                <tr>
+                                    <th>Qty</th>
+                                    <th>Name</th>
+                                    <th>Check In</th>
+                                    <th>Check Out</th>
+                                    <th>Hotel</th>
+                                    <th>Place</th>
+                                </tr>
+                              </thead>
+                              <tbody></tbody>
+                            </table>
+                          </div>
+                          <div class="modal-footer">This is your receipt</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <!-- ============================================================== -->
+          <!-- End PAge Content -->
+          <!-- ============================================================== -->
+          <!-- ============================================================== -->
+          <!-- Right sidebar -->
+          <!-- ============================================================== -->
+          <!-- .right-sidebar -->
+          <!-- ============================================================== -->
+          <!-- End Right sidebar -->
+          <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer text-center">
+          © 2023 TRIP TROVE by
+          <a href="https://psuuc-ckpcendana.github.io">KAIDE</a>
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+      </div>
+      <!-- ============================================================== -->
+      <!-- End Page wrapper  -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../assets/plugins/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app-style-switcher.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="js/custom.js"></script>
+    <script>
+      var selectedRow = null;
+      function onFormSubmit(e) {
+        event.preventDefault();
+        var formData = readFormData();
+        if (selectedRow === null) {
+          insertNewRecord(formData);
+        } else {
+          updateRecord(formData);
+        }
+        resetForm();
+      }
+      //retrieve data
+      function readFormData() {
+        var formData = {};
+        formData["Type"] = document.getElementById("Type").value;
+        formData["Name"] = document.getElementById("Name").value;
+        formData["From"] = document.getElementById("From").value;
+        formData["To"] = document.getElementById("To").value;
+        formData["alis"] = document.getElementById("alis").value;
+        formData["Place"] = document.getElementById("Place").value;
+        return formData;
+      }
+
+      //insert data
+      function insertNewRecord(data) {
+        var table = document
+          .getElementById("receipT")
+          .getElementsByTagName("tbody")[0];
+
+        var newRow = table.insertRow(table.length);
+        var cell1 = newRow.insertCell(0);
+        cell1.innerHTML = data.Type;
+        var cell2 = newRow.insertCell(1);
+        cell2.innerHTML = data.Name;
+        var cell3 = newRow.insertCell(2);
+        cell3.innerHTML = data.From;
+        var cell4 = newRow.insertCell(3);
+        cell4.innerHTML = data.To;
+        var cell5 = newRow.insertCell(4);
+        cell5.innerHTML = data.alis;
+        var cell5 = newRow.insertCell(5);
+        cell5.innerHTML = data.Place;
+      }
+
+      //edit
+      function onEdit(td) {
+        selectedRow = td.parentElement.parentElement;
+        document.getElementById("Type").value = selectedRow.cells[0].innerHTML;
+        document.getElementById("Name").value = selectedRow.cells[1].innerHTML;
+        document.getElementById("From").value = selectedRow.cells[2].innerHTML;
+        document.getElementById("To").value = selectedRow.cells[3].innerHTML;
+        document.getElementById("alis").value = selectedRow.cells[4].innerHTML;
+        document.getElementById("alis").value = selectedRow.cells[5].innerHTML;
+      }
+      function updateRecord(formData) {
+        selectedRow.cells[0].innerHTML = formData.Type;
+        selectedRow.cell[1].innerHTML = formData.Name;
+        selectedRow.cells[2].innerHTML = formData.From;
+        selectedRow.cell[3].innerHTML = formData.To;
+        selectedRow.cell[4].innerHTML = formData.alis;
+      }
+      //delete
+      function onDelete(td) {
+        if (confirm("do you want to delete this record?")) {
+          row = td.parentElement.parentElement;
+          document.getElementById("flightT").deleteRow(row.rowIndex);
+        }
+        resetForm();
+      }
+
+      //reset
+      function resetForm() {
+        document.getElementById("Type").value = "";
+        document.getElementById("Name").value = "";
+        document.getElementById("From").value = "";
+        document.getElementById("To").value = "";
+        document.getElementById("alis").value = "";
+      }
+    </script>
+  </body>
+</html>
