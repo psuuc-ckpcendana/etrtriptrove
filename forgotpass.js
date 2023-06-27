@@ -6,6 +6,7 @@ const uname = 'AdminDoming';
 
       // Check if the provided username exists in the login credentials object
       if (username == uname) {
+          alert("Your Verification Code is '12345'.");
         window.location.href = 'nextfp.html';
       } else if (username != uname){
         alert("Invalid username. Please try again.");
